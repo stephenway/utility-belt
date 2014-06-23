@@ -1,0 +1,23 @@
+// images.scss
+// ===========
+
+// background-image( <$name>, <$size>, <$path>, <$extension>, <$suffix> )
+$background-image-path: '../img' !default;
+@mixin background-image (
+  $name,
+  $size: false,
+  $path: $default-image-path,
+  $extension: 'png',
+  $suffix: '@2x'
+){
+  background-image: url(#{$path}/#{$name}.svg);
+  @if($size) {
+    background-size: $size;
+  }
+  .no-svg & {
+    background-image: url(#{$path}/#{$name}.#{$extension});
+    @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+      background-image: url(#{$path}/#{$name}#{$suffix}.#{$extension});
+    }
+  }
+}

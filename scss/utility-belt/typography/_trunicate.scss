@@ -1,0 +1,47 @@
+// trunicate.scss
+// ==============
+
+// trunicate( <$width>, <$height> )
+@mixin trunicate(
+  $width: false,
+  $height: false
+){
+  @if($width) { max-width: $width; }
+  @if($height) { max-height: $height; }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin trunicate-multiline(
+  $background-color: white,
+  $width: false,
+  $height: false
+){
+  max-height: $height;
+  overflow: hidden;
+  &:before {
+    content:"";
+    float: left;
+    height: $height;
+    width: 5px;
+  }
+  &:after {
+    background: $background-color;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), $background-color 50%, $background-color);
+    content: "\02026";
+    float: right;
+    left: 100%;
+    padding-right: 5px;
+    position: relative;
+    text-align: right;
+    top: -25px;
+  }
+
+  > *:first-child {
+   float: right;
+   margin-left: -5px;
+   width: 100%;
+ }
+
+}

@@ -1,0 +1,50 @@
+// box.scss
+// ========
+
+// box-fan( <$before-degree> || <$before-color> || <$after-degree> || <$after-color> )
+@mixin box-fan(
+  $before-degree: 2deg,
+  $before-color: transparent,
+  $after-degree: -$before-degree,
+  $after-color: $before-color,
+  $fan-zindex: 1
+){
+  position: relative;
+  z-index: $fan-zindex;
+  &:before, &:after {
+    @include position-absolute-y;
+    z-index: -1;
+    content: " ";
+    left: -100%;
+    right: -100%;
+    padding: {
+      left: 100%;
+      right: 100%;
+    }
+  }
+
+  &:before {
+    transform: rotate($before-degree * 2);
+    background: $before-color;
+  }
+
+  &:after {
+    transform: rotate($after-degree * 2);
+    background: $after-color;
+  }
+
+  @media #{$medium-up} {
+    &:before { transform: rotate($before-degree); }
+    &:after  { transform: rotate($after-degree); }
+  }
+
+}
+
+// box-shade( <$color> || <$opacity> )
+@mixin box-shade(
+  $color: transparent,
+  $opacity: 0.65
+){
+  @include position-absolute-all;
+  background-color: rgba($color,$opacity);
+}

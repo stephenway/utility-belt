@@ -1,0 +1,5 @@
+*.DS_Store
+*.log
+/css/**/*.css
+/bower_components/*
+/node_modules/*

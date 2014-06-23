@@ -1,0 +1,29 @@
+{
+  "name": "utility-belt",
+  "version": "1.0.0",
+  "description": "Tools and Effects for Sass",
+  "main": "scss/utility-belt.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stephenway/utility-belt"
+  },
+  "keywords": [
+    "tools",
+    "effects",
+    "sass",
+    "functions",
+    "mixins"
+  ],
+  "author": "Stephen Way",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenway/utility-belt/issues"
+  },
+  "homepage": "https://github.com/stephenway/utility-belt",
+  "dependencies": {
+    "styledocco": "^0.6.6"
+  }
+}

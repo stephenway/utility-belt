@@ -1,0 +1,25 @@
+// visibility.scss
+// ===============
+
+// text-offscreen( <$offset> )
+@mixin text-offscreen (
+  $offset: -9999em
+){
+  position: relative;
+  overflow: hidden;
+  text-indent: $offset;
+  text-align: left;
+}
+
+// text-replace( <$image>, <$image-position-x>, <$image-position-y>, <$image-repeat> )
+@mixin text-replace(
+  $image,
+  $image-position-x: 50%,
+  $image-position-y: $image-position-x,
+  $image-repeat: no-repeat
+){
+  @include text-offscreen;
+  background-image: url($image);
+  background-repeat: $image-repeat;
+  position: $image-position-x $image-position-y;
+}
