@@ -1,18 +1,18 @@
 // color.scss
 // ==========
 
-// hex( <$color> )
+/* hex( <$color> ) */
 @function rgb-to-hex($color) {
   @return mix($color);
 }
 
-// rgba-to-hex( <$color>, <$background> )
+/* rgba-to-hex( <$color>, <$background> ) */
 @function rgba-to-hex($color, $background) {
   @return mix(rgba($color,1), $background, percentage(alpha($color)));
 }
 
-// alpha-attribute
-// http://thesassway.com/intermediate/mixins-for-semi-transparent-colors/
+/* alpha-attribute
+   http://thesassway.com/intermediate/mixins-for-semi-transparent-colors/ */
 @mixin alpha-attribute($attribute, $color, $background: white) {
   $percent: alpha($color) * 100%;
   $opaque: opacify($color, 1);
