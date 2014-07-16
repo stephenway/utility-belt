@@ -3,3 +3,4 @@
 /css/**/*.css
 /bower_components/*
 /node_modules/*
+*.sass-cache
