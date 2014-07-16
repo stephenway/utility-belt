@@ -1,0 +1,28 @@
+// protection.scss
+// ===============
+
+// text-protection( <$angle> <$offset> <$mode> )
+@mixin text-scrim(
+  $angle: bottom,
+  $opacity: 0.2,
+  $mode: dark
+) {
+  @if $mode == dark {
+    background-image: linear-gradient($angle, rgba(0,0,0,$opacity) 0%, rgba(0,0,0,$opacity) 50%, transparent 100%)
+  } @else if $mode == light {
+    background-image: linear-gradient($angle, rgba(255,255,255,$opacity) 0%, rgba(255,255,255,$opacity) 50%, transparent 100%)
+  } @else {
+    @warn "$mode is not defined:" $mode;
+  }
+
+  // Opacity Range Warnings
+  @if ($mode == dark and $opacity < 0.2) {
+    @warn "Dark scrim shouldn't be less than 20% opacity.";
+  } @else if ($mode == dark and $opacity > 0.4) {
+    @warn "Dark scrim shouldn't be more than 40% opacity.";
+  } @else if ($mode == light and $opacity < 0.4) {
+    @warn "Light scrim shouldn't be less than 40% opacity.";
+  } @else if ($mode == light and $opacity > 0.6) {
+    @warn "Light scrim shouldn't be more than 60% opacity.";
+  }
+}
