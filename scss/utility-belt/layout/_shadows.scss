@@ -13,7 +13,12 @@ $z-depth-bottom-3: rgba(0,0,0,0.23) 0 6px 3px !default;
 $z-depth-bottom-4: rgba(0,0,0,0.22) 0 10px 5px !default;
 $z-depth-bottom-5: rgba(0,0,0,0.22) 0 15px 6px !default;
 
+// z-depth( <$z-depth> <$direction> )
+@function z-depth( $z-depth: 1, $direction: bottom ) {
+  @return $z-depth-#{$direction}-#{$z-depth};
+}
+
 // modal-shadow( <$z-depth> <$direction> )
 @mixin modal-shadow( $z-depth: 1, $direction: bottom ) {
-  box-shadow: $z-depth-#{$direction}-#{$z-depth};
+  box-shadow: z-depth($z-depth, $direction);
 }
