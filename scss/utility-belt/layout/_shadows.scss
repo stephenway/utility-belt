@@ -1,24 +1,29 @@
 // shadows.scss
 // ===============
 
-$z-depth-top-1: rgba(0,0,0,0.12) 0 1px 1.5px !default;
-$z-depth-top-2: rgba(0,0,0,0.16) 0 3px 3px !default;
-$z-depth-top-3: rgba(0,0,0,0.19) 0 10px 10px !default;
-$z-depth-top-4: rgba(0,0,0,0.25) 0 14px 14px !default;
-$z-depth-top-5: rgba(0,0,0,0.30) 0 19px 19px !default;
+$z-depth-top: (
+  1: rgba(0,0,0,0.12) 0 1px 1.5px,
+  2: rgba(0,0,0,0.16) 0 3px 3px,
+  3: rgba(0,0,0,0.19) 0 10px 10px,
+  4: rgba(0,0,0,0.25) 0 14px 14px,
+  5: rgba(0,0,0,0.30) 0 19px 19px
+);
 
-$z-depth-bottom-1: rgba(0,0,0,0.24) 0 1px 1px !default;
-$z-depth-bottom-2: rgba(0,0,0,0.23) 0 3px 3px !default;
-$z-depth-bottom-3: rgba(0,0,0,0.23) 0 6px 3px !default;
-$z-depth-bottom-4: rgba(0,0,0,0.22) 0 10px 5px !default;
-$z-depth-bottom-5: rgba(0,0,0,0.22) 0 15px 6px !default;
+$z-depth-bottom: (
+  1: rgba(0,0,0,0.24) 0 1px 1px,
+  2: rgba(0,0,0,0.23) 0 3px 3px,
+  3: rgba(0,0,0,0.23) 0 6px 3px,
+  4: rgba(0,0,0,0.22) 0 10px 5px,
+  5: rgba(0,0,0,0.22) 0 15px 6px
+);
 
 // z-depth( <$z-depth> <$direction> )
 @function z-depth( $z-depth: 1, $direction: bottom ) {
-  @return $z-depth-#{$direction}-#{$z-depth};
-}
+  @if $direction == bottom {
+    $z-map: map-get($z-depth-bottom, $z-depth);
+  } @else if $direction == top {
+    $z-map: map-get($z-depth-top, $z-depth);
+  }
 
-// modal-shadow( <$z-depth> <$direction> )
-@mixin modal-shadow( $z-depth: 1, $direction: bottom ) {
-  box-shadow: z-depth($z-depth, $direction);
+  @return $z-map;
 }
