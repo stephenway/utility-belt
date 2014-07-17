@@ -1,6 +1,6 @@
 {
   "name": "utility-belt",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Tools and Effects for Sass",
   "main": "scss/utility-belt.scss",
   "scripts": {
