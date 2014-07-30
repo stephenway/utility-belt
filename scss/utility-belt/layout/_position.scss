@@ -31,7 +31,7 @@
 @mixin position-absolute-all { @include position(absolute, 0 0 0 0);   }
 @mixin position-absolute-y   { @include position(absolute, 0 no 0 no); }
 @mixin position-absolute-x   { @include position(absolute, no 0 no 0); }
-@mixin position-absolute-tr  { @include position(absolute, 0 no no 0); }
+@mixin position-absolute-tr  { @include position(absolute, 0 0 no no); }
 @mixin position-absolute-br  { @include position(absolute, no 0 0 no); }
 @mixin position-absolute-bl  { @include position(absolute, no no 0 0); }
 @mixin position-absolute-tl  { @include position(absolute, 0 no no 0); }
@@ -40,7 +40,7 @@
 @mixin position-fixed-all { @include position(fixed, 0 0 0 0);   }
 @mixin position-fixed-y   { @include position(fixed, 0 no 0 no); }
 @mixin position-fixed-x   { @include position(fixed, no 0 no 0); }
-@mixin position-fixed-tr  { @include position(fixed, 0 no no 0); }
+@mixin position-fixed-tr  { @include position(fixed, 0 0 no no); }
 @mixin position-fixed-br  { @include position(fixed, no 0 0 no); }
 @mixin position-fixed-bl  { @include position(fixed, no no 0 0); }
 @mixin position-fixed-tl  { @include position(fixed, 0 no no 0); }
