@@ -1,3 +1,20 @@
+$caption-figure-bg: rgb(48,133,163) !default;
+$sadie-bg: rgb(72,76,97) !default;
+$roxy-bg: rgb(5,171,224) !default;
+$roxy-bg-2: scale-color(adjust-hue($roxy-bg, 116.66589deg), $saturation: 100.0%, $lightness: 58.00712%) !default;
+$bubba-bg: rgb(158,84,6) !default;
+$layla-bg: rgb(24,163,103) !default;
+$honey-bg: rgb(74,55,83) !default;
+$oscar-bg: rgb(155,74,27) !default;
+$oscar-bg-2: scale-color(adjust-hue($oscar-bg, 104deg), $saturation: -27.87591%, $lightness: -24.17582%) !default;
+$oscar-bg-3: scale-color(adjust-hue($oscar-bg, 15deg), $saturation: -77.25%, $lightness: -45.05495%) !default;
+$ruby-bg: rgb(23,129,156) !default;
+$milo-bg: rgb(46,93,90) !default;
+$dexter-bg: rgb(37,141,200) !default;
+$dexter-bg-2: scale-color(adjust-hue($dexter-bg, -173deg), $saturation: 1.05471%, $lightness: -48.10127%) !default;
+$sarah-bg: rgb(66,176,120) !default;
+$zoe-bg: rgb(60,74,80) !default;
+
 %caption-effect {
   overflow: hidden;
   margin: 0;
@@ -14,7 +31,7 @@
     margin: -0.135em;
     width: 33.333%;
     height: 400px;
-    background: #3085a3;
+    background: $caption-figure-bg;
     text-align: center;
     cursor: pointer;
   }
@@ -146,7 +163,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+    background: linear-gradient(to bottom, rgba(red($sadie-bg),green($sadie-bg),blue($sadie-bg),0) 0%, rgba(red($sadie-bg),green($sadie-bg),blue($sadie-bg),0.8) 75%);
     content: '';
     opacity: 0;
     transform: translate3d(0,50%,0);
@@ -157,7 +174,7 @@
     top: 50%;
     left: 0;
     width: 100%;
-    color: #484c61;
+    color: $sadie-bg;
     transition: transform 0.35s, color 0.35s;
     transform: translate3d(0,-50%,0);
   }
@@ -188,7 +205,7 @@
 }
 
 %caption-roxy {
-  background: linear-gradient(45deg, #ff89e9 0%,#05abe0 100%);
+  background: linear-gradient(45deg, $roxy-bg-2 0%,$roxy-bg 100%);
 
   img {
     width: calc(100% + 60px);
@@ -237,7 +254,7 @@
 
 
 %caption-bubba {
-  background: #9e5406;
+  background: $bubba-bg;
 
   img {
     opacity: 0.7;
@@ -360,8 +377,8 @@
 }
 
 
-%caprtion-layla {
-  background: #18a367;
+%caption-layla {
+  background: $layla-bg;
 
   img {
     min-width: 100%;
@@ -442,8 +459,8 @@
 }
 
 
-%caprion-honey {
-  background: #4a3753;
+%caption-honey {
+  background: $honey-bg;
 
   img {
     opacity: 0.9;
@@ -496,9 +513,8 @@
 }
 
 
-
 %caption-oscar {
-  background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+  background: linear-gradient(45deg, $oscar-bg-2 0%,$oscar-bg 40%,$oscar-bg-3 100%);
 
   img {
     opacity: 0.9;
@@ -507,7 +523,7 @@
 
   figcaption {
     padding: 3em;
-    background-color: rgba(58,52,42,0.7);
+    background-color: rgba(red($oscar-bg-3),green($oscar-bg-3),blue($oscar-bg-3),0.7);
     transition: background-color 0.35s;
   }
 
@@ -527,8 +543,7 @@
     transform: translate3d(0,100%,0);
   }
 
-  figcaption::before,
-  p {
+  figcaption::before, p {
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: scale(0);
@@ -538,14 +553,13 @@
     transform: translate3d(0,0,0);
   }
 
-  &:hover figcaption::before,
-  &:hover p {
+  &:hover figcaption::before, &:hover p {
     opacity: 1;
     transform: scale(1);
   }
 
   &:hover figcaption {
-    background-color: rgba(58,52,42,0);
+    background-color: rgba(red($oscar-bg-3),green($oscar-bg-3),blue($oscar-bg-3),0);
   }
 
   &:hover img {
@@ -561,8 +575,7 @@
     text-align: right;
   }
 
-  h2,
-  p {
+  h2, p {
     position: absolute;
     right: 30px;
     left: 30px;
@@ -597,14 +610,12 @@
     transform: translate3d(0,40px,0);
   }
 
-  h2::after,
-  p {
+  h2::after, p {
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
   }
 
-  &:hover h2::after,
-  &:hover p {
+  &:hover h2::after, &:hover p {
     opacity: 1;
     transform: translate3d(0,0,0);
   }
@@ -612,7 +623,7 @@
 }
 
 %caption-ruby {
-  background-color: #17819c;
+  background-color: $ruby-bg;
 
   img {
     opacity: 0.7;
@@ -653,7 +664,7 @@
 
 
 %caption-milo {
-  background: #2e5d5a;
+  background: $milo-bg;
 
   img {
     width: calc(100% + 60px);
@@ -694,7 +705,7 @@
 
 
 %caption-dexter {
-  background: linear-gradient(to bottom, rgba(37,141,200,1) 0%,rgba(104,60,19,1) 100%); 
+  background: linear-gradient(to bottom, rgba(red($dexter-bg),green($dexter-bg),blue($dexter-bg),1) 0%, rgba(red($dexter-bg-2),green($dexter-bg-2),blue($dexter-bg-2),1) 100%);
 
   img {
     transition: opacity 0.35s;
@@ -744,7 +755,7 @@
 
 
 %caption-sarah {
-  background: #42b078;
+  background: $sarah-bg;
 
   img {
     width: calc(100% + 20px);
@@ -806,7 +817,7 @@
     padding: 1em;
     height: 3.75em;
     background: #fff;
-    color: #3c4a50;
+    color: $zoe-bg;
     transition: transform 0.35s;
     transform: translate3d(0,100%,0);
   }
