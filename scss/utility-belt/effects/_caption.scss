@@ -1,17 +1,17 @@
 $caption-figure-bg: rgb(48,133,163) !default;
 $sadie-bg: rgb(72,76,97) !default;
 $roxy-bg: rgb(5,171,224) !default;
-$roxy-bg-2: scale-color(adjust-hue($roxy-bg, 116.66589deg), $saturation: 100.0@mixin , $lightness: 58.00712%) !default;
+$roxy-bg-2: scale-color(adjust-hue($roxy-bg, 116deg), $saturation: 100.0%, $lightness: 58.00712%) !default;
 $bubba-bg: rgb(158,84,6) !default;
 $layla-bg: rgb(24,163,103) !default;
 $honey-bg: rgb(74,55,83) !default;
 $oscar-bg: rgb(155,74,27) !default;
-$oscar-bg-2: scale-color(adjust-hue($oscar-bg, 104deg), $saturation: -27.87591@mixin , $lightness: -24.17582%) !default;
-$oscar-bg-3: scale-color(adjust-hue($oscar-bg, 15deg), $saturation: -77.25@mixin , $lightness: -45.05495%) !default;
+$oscar-bg-2: scale-color(adjust-hue($oscar-bg, 104deg), $saturation: -27.87591%, $lightness: -24.17582%) !default;
+$oscar-bg-3: scale-color(adjust-hue($oscar-bg, 15deg), $saturation: -77.25%, $lightness: -45.05495%) !default;
 $ruby-bg: rgb(23,129,156) !default;
 $milo-bg: rgb(46,93,90) !default;
 $dexter-bg: rgb(37,141,200) !default;
-$dexter-bg-2: scale-color(adjust-hue($dexter-bg, -173deg), $saturation: 1.05471@mixin , $lightness: -48.10127%) !default;
+$dexter-bg-2: scale-color(adjust-hue($dexter-bg, -173deg), $saturation: 1.05471%, $lightness: -48.10127%) !default;
 $sarah-bg: rgb(66,176,120) !default;
 $zoe-bg: rgb(60,74,80) !default;
 
@@ -19,7 +19,7 @@ $zoe-bg: rgb(60,74,80) !default;
   overflow: hidden;
   margin: 0;
   padding: 3em 0 0 0;
-  width: 100@mixin ;
+  width: 100%;
   list-style: none;
   text-align: center;
 
@@ -29,7 +29,7 @@ $zoe-bg: rgb(60,74,80) !default;
     display: inline-block;
     overflow: hidden;
     margin: -0.135em;
-    width: 33.333@mixin ;
+    width: 33.333%;
     height: 400px;
     background: $caption-figure-bg;
     text-align: center;
@@ -39,7 +39,7 @@ $zoe-bg: rgb(60,74,80) !default;
   figure img {
     position: relative;
     display: block;
-    min-height: 100@mixin ;
+    min-height: 100%;
     opacity: 0.8;
   }
 
@@ -61,13 +61,13 @@ $zoe-bg: rgb(60,74,80) !default;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100@mixin ;
-    height: 100@mixin ;
+    width: 100%;
+    height: 100%;
   }
 
   figure a {
     z-index: 1000;
-    text-indent: 200@mixin ;
+    text-indent: 200%;
     white-space: nowrap;
     font-size: 0;
     opacity: 0;
@@ -89,16 +89,16 @@ $zoe-bg: rgb(60,74,80) !default;
 
   figure p {
     letter-spacing: 1px;
-    font-size: 68.5@mixin ;
+    font-size: 68.5%;
   }
 
   @media screen and (max-width: 69.5em) {
     .caption-effect figure {
-      width: 50@mixin ;
+      width: 50%;
     }	
 
     .caption-effect figure figcaption {
-      font-size: 90@mixin ;
+      font-size: 90%;
     }
   }
 
@@ -106,7 +106,7 @@ $zoe-bg: rgb(60,74,80) !default;
   @media screen and (max-width: 41.5em) {
 
     .caption-effect figure {
-      width: 100@mixin ;
+      width: 100%;
     }
   }
 }
@@ -114,7 +114,7 @@ $zoe-bg: rgb(60,74,80) !default;
 
 @mixin caption-lily {
   img {
-    width: calc(100@mixin  + 50px);
+    width: calc(100% + 50px);
     opacity: 0.7;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(-40px,0,0);
@@ -123,7 +123,7 @@ $zoe-bg: rgb(60,74,80) !default;
   figcaption {
     top: auto;
     bottom: 0;
-    height: 50@mixin ;
+    height: 50%;
     text-align: left;
   }
 
@@ -161,22 +161,22 @@ $zoe-bg: rgb(60,74,80) !default;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100@mixin ;
-    height: 100@mixin ;
-    background: linear-gradient(to bottom, rgba(red($sadie-bg),green($sadie-bg),blue($sadie-bg),0) 0@mixin , rgba(red($sadie-bg),green($sadie-bg),blue($sadie-bg),0.8) 75%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(red($sadie-bg),green($sadie-bg),blue($sadie-bg),0) 0%, rgba(red($sadie-bg),green($sadie-bg),blue($sadie-bg),0.8) 75%);
     content: '';
     opacity: 0;
-    transform: translate3d(0,50@mixin ,0);
+    transform: translate3d(0,50%,0);
   }
 
   h2 {
     position: absolute;
-    top: 50@mixin ;
+    top: 50%;
     left: 0;
-    width: 100@mixin ;
+    width: 100%;
     color: $sadie-bg;
     transition: transform 0.35s, color 0.35s;
-    transform: translate3d(0,-50@mixin ,0);
+    transform: translate3d(0,-50%,0);
   }
 
   figcaption::before, p {
@@ -188,14 +188,14 @@ $zoe-bg: rgb(60,74,80) !default;
     bottom: 0;
     left: 0;
     padding: 2em;
-    width: 100@mixin ;
+    width: 100%;
     opacity: 0;
     transform: translate3d(0,10px,0);
   }
 
   &:hover h2 {
     color: #fff;
-    transform: translate3d(0,-50@mixin ,0) translate3d(0,-40px,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
   }
 
   &:hover figcaption::before, &:hover p {
@@ -205,10 +205,10 @@ $zoe-bg: rgb(60,74,80) !default;
 }
 
 @mixin caption-roxy {
-  background: linear-gradient(45deg, $roxy-bg-2 0@mixin ,$roxy-bg 100%);
+  background: linear-gradient(45deg, $roxy-bg-2 0%,$roxy-bg 100%);
 
   img {
-    width: calc(100@mixin  + 60px);
+    width: calc(100% + 60px);
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(-50px,0,0);
   }
@@ -232,7 +232,7 @@ $zoe-bg: rgb(60,74,80) !default;
   }
 
   h2 {
-    padding: 30@mixin  0 10px 0;
+    padding: 30% 0 10px 0;
   }
 
   p {
@@ -289,7 +289,7 @@ $zoe-bg: rgb(60,74,80) !default;
   }
 
   h2 {
-    padding-top: 30@mixin ;
+    padding-top: 30%;
     transition: transform 0.35s;
     transform: translate3d(0,-20px,0);
   }
@@ -329,49 +329,49 @@ $zoe-bg: rgb(60,74,80) !default;
 
   figcaption::before, figcaption::after {
     position: absolute;
-    top: 50@mixin ;
-    left: 50@mixin ;
-    width: 80@mixin ;
+    top: 50%;
+    left: 50%;
+    width: 80%;
     height: 1px;
     background: #fff;
     content: '';
     transition: opacity 0.35s, transform 0.35s;
-    transform: translate3d(-50@mixin ,-50%,0);
+    transform: translate3d(-50%,-50%,0);
   }
 
   &:hover figcaption::before {
     opacity: 0.5;
-    transform: translate3d(-50@mixin ,-50%,0) rotate(45deg);
+    transform: translate3d(-50%,-50%,0) rotate(45deg);
   }
 
   &:hover figcaption::after {
     opacity: 0.5;
-    transform: translate3d(-50@mixin ,-50%,0) rotate(-45deg);
+    transform: translate3d(-50%,-50%,0) rotate(-45deg);
   }
 
   h2, p {
     position: absolute;
-    top: 50@mixin ;
+    top: 50%;
     left: 0;
-    width: 100@mixin ;
+    width: 100%;
     transition: transform 0.35s;
   }
 
   h2 {
-    transform: translate3d(0,-50@mixin ,0) translate3d(0,-150%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
   }
 
   p {
     padding: 0.25em 2em;
-    transform: translate3d(0,-50@mixin ,0) translate3d(0,150%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,150%,0);
   }
 
   &:hover h2 {
-    transform: translate3d(0,-50@mixin ,0) translate3d(0,-100%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
   }
 
   &:hover p {
-    transform: translate3d(0,-50@mixin ,0) translate3d(0,100%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,100%,0);
   }
 
 }
@@ -381,8 +381,8 @@ $zoe-bg: rgb(60,74,80) !default;
   background: $layla-bg;
 
   img {
-    min-width: 100@mixin ;
-    height: calc(100@mixin  + 40px);
+    min-width: 100%;
+    height: calc(100% + 40px);
   }
 
   figcaption {
@@ -414,11 +414,11 @@ $zoe-bg: rgb(60,74,80) !default;
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
     transform: scale(1,0);
-    transform-origin: 100@mixin  0;
+    transform-origin: 100% 0;
   }
 
   h2 {
-    padding-top: 26@mixin ;
+    padding-top: 26%;
     transition: transform 0.35s;
   }
 
@@ -475,7 +475,7 @@ $zoe-bg: rgb(60,74,80) !default;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100@mixin ;
+    width: 100%;
     height: 10px;
     background: #fff;
     content: '';
@@ -487,7 +487,7 @@ $zoe-bg: rgb(60,74,80) !default;
     bottom: 0;
     left: 0;
     padding: 1em 1.5em;
-    width: 100@mixin ;
+    width: 100%;
     text-align: left;
     transform: translate3d(0,-30px,0);
   }
@@ -514,7 +514,7 @@ $zoe-bg: rgb(60,74,80) !default;
 
 
 @mixin caption-oscar {
-  background: linear-gradient(45deg, $oscar-bg-2 0@mixin ,$oscar-bg 40%,$oscar-bg-3 100%);
+  background: linear-gradient(45deg, $oscar-bg-2 0%,$oscar-bg 40%,$oscar-bg-3 100%);
 
   img {
     opacity: 0.9;
@@ -538,9 +538,9 @@ $zoe-bg: rgb(60,74,80) !default;
   }
 
   h2 {
-    margin: 20@mixin  0 10px 0;
+    margin: 20% 0 10px 0;
     transition: transform 0.35s;
-    transform: translate3d(0,100@mixin ,0);
+    transform: translate3d(0,100%,0);
   }
 
   figcaption::before, p {
@@ -586,7 +586,7 @@ $zoe-bg: rgb(60,74,80) !default;
   p {
     bottom: 30px;
     line-height: 1.5;
-    transform: translate3d(0,100@mixin ,0);
+    transform: translate3d(0,100%,0);
   }
 
   h2 {
@@ -601,9 +601,9 @@ $zoe-bg: rgb(60,74,80) !default;
 
   h2::after {
     position: absolute;
-    top: 100@mixin ;
+    top: 100%;
     left: 0;
-    width: 100@mixin ;
+    width: 100%;
     height: 4px;
     background: #fff;
     content: '';
@@ -637,7 +637,7 @@ $zoe-bg: rgb(60,74,80) !default;
   }
 
   h2 {
-    margin-top: 20@mixin ;
+    margin-top: 20%;
     transition: transform 0.35s;
     transform: translate3d(0,20px,0);
   }
@@ -667,7 +667,7 @@ $zoe-bg: rgb(60,74,80) !default;
   background: $milo-bg;
 
   img {
-    width: calc(100@mixin  + 60px);
+    width: calc(100% + 60px);
     opacity: 1;
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(-30px,0,0) scale(1.12);
@@ -688,7 +688,7 @@ $zoe-bg: rgb(60,74,80) !default;
 
   p {
     padding: 0 10px 0 0;
-    width: 50@mixin ;
+    width: 50%;
     border-right: 1px solid #fff;
     text-align: right;
     opacity: 0;
@@ -705,7 +705,7 @@ $zoe-bg: rgb(60,74,80) !default;
 
 
 @mixin caption-dexter {
-  background: linear-gradient(to bottom, rgba(red($dexter-bg),green($dexter-bg),blue($dexter-bg),1) 0@mixin , rgba(red($dexter-bg-2),green($dexter-bg-2),blue($dexter-bg-2),1) 100%);
+  background: linear-gradient(to bottom, rgba(red($dexter-bg),green($dexter-bg),blue($dexter-bg),1) 0%, rgba(red($dexter-bg-2),green($dexter-bg-2),blue($dexter-bg-2),1) 100%);
 
   img {
     transition: opacity 0.35s;
@@ -720,11 +720,11 @@ $zoe-bg: rgb(60,74,80) !default;
     right: 30px;
     bottom: 30px;
     left: 30px;
-    height: calc(50@mixin  - 30px);
+    height: calc(50% - 30px);
     border: 7px solid #fff;
     content: '';
     transition: transform 0.35s;
-    transform: translate3d(0,-100@mixin ,0);
+    transform: translate3d(0,-100%,0);
   }
 
   &:hover figcaption::after {
@@ -758,7 +758,7 @@ $zoe-bg: rgb(60,74,80) !default;
   background: $sarah-bg;
 
   img {
-    width: calc(100@mixin  + 20px);
+    width: calc(100% + 20px);
     transition: opacity 0.35s, transform 0.35s;
     transform: translate3d(-10px,0,0);
     backface-visibility: hidden;
@@ -783,12 +783,12 @@ $zoe-bg: rgb(60,74,80) !default;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100@mixin ;
+    width: 100%;
     height: 3px;
     background: #fff;
     content: '';
     transition: transform 0.35s;
-    transform: translate3d(-100@mixin ,0,0);
+    transform: translate3d(-100%,0,0);
   }
 
   &:hover h2::after {
@@ -799,7 +799,7 @@ $zoe-bg: rgb(60,74,80) !default;
     padding: 1em 0;
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
-    transform: translate3d(100@mixin ,0,0);
+    transform: translate3d(100%,0,0);
   }
 
   &:hover p {
@@ -819,7 +819,7 @@ $zoe-bg: rgb(60,74,80) !default;
     background: #fff;
     color: $zoe-bg;
     transition: transform 0.35s;
-    transform: translate3d(0,100@mixin ,0);
+    transform: translate3d(0,100%,0);
   }
 
   h2 {
@@ -836,7 +836,7 @@ $zoe-bg: rgb(60,74,80) !default;
     padding: 2em;
     color: #fff;
     text-transform: none;
-    font-size: 90@mixin ;
+    font-size: 90%;
     opacity: 0;
     transition: opacity 0.35s;
   }
@@ -844,7 +844,7 @@ $zoe-bg: rgb(60,74,80) !default;
   h2,
   figcaption > span {
     transition: transform 0.35s;
-    transform: translate3d(0,200@mixin ,0);
+    transform: translate3d(0,200%,0);
   }
 
   figcaption > span::before {
@@ -919,7 +919,7 @@ $zoe-bg: rgb(60,74,80) !default;
   }
 
   h2 {
-    padding: 20@mixin  0 20px 0;
+    padding: 20% 0 20px 0;
   }
 
   p {
