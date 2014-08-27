@@ -1,5 +1,16 @@
 {
   "name": "utility-belt",
   "version": "1.0.2",
-  "main": "scss/utility-belt.scss"
+  "main": [
+    "scss/utility-belt.scss",
+    "scss/*"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ]
 }
