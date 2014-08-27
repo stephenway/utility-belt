@@ -1,6 +1,13 @@
 {
   "name": "utility-belt",
   "version": "1.0.2",
+  "authors": [
+    "Stephen Way <stephen@stephenway.net> (http://stephenway.net)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenway/utility-belt.git"
+  },
   "main": [
     "scss/utility-belt.scss",
     "scss/*"
