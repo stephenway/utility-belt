@@ -3,7 +3,7 @@
 
 // text-protection( <$angle> <$offset> <$mode> )
 @mixin text-scrim(
-  $angle: bottom,
+  $angle: -180,
   $opacity: 0.2,
   $mode: dark
 ) {
