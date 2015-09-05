@@ -1,0 +1,30 @@
+// health.scss
+// ==========
+
+// level-check( )
+@mixin level-check {
+  * { background-color: rgba(255,0,0,.2); }
+  * * { background-color: rgba(0,255,0,.2); }
+  * * * { background-color: rgba(0,0,255,.2); }
+  * * * * { background-color: rgba(255,0,255,.2); }
+  * * * * * { background-color: rgba(0,255,255,.2); }
+  * * * * * * { background-color: rgba(255,255,0,.2); }
+}
+
+// BEMIT Healthcheck b
+// Source: http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/
+
+// namespace-check( )
+@mixin namespace-check {
+  .s-health-check { // Add this class to the HTML element
+    [class] { outline: 5px solid lightgrey; } // Outline all Class Elements
+    [class*="__"] { outline: 5px solid grey; } // Outline all BEM Elements.
+    [class*="--"] { outline: 5px solid darkgrey; } // Outline all BEM Modifiers.
+    [class^="o-"],
+    [class*=" o-"] { outline: 5px solid orange; } // Outline all Object classes.
+    [class^="c-"],
+    [class*=" c-"] { outline: 5px solid cyan; } // Outline all Component classes.
+    [class*="@"] { outline: 5px solid rosybrown; } // Outline all Responsive classes.
+    [class^="_"] { outline: 5px solid red; } // Outline all Hack classes.
+  }
+}
